@@ -41,7 +41,7 @@ export default function Create() {
       setDetailsError(true)
     }
     if (title && details) {
-      fetch('http://localhost:8000/notes', {
+      fetch('https://www.raininmind.com/db.json', {
         method: 'POST',
         headers: {"Content-type": "application/json"},
         body: JSON.stringify({ title, details, category })
@@ -50,7 +50,7 @@ export default function Create() {
   }
 
   return (
-    <Container size="sm">
+    <Container maxWidth="md">
       <Typography
         variant="h6" 
         color="textSecondary"

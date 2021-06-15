@@ -83,7 +83,7 @@ export default function Layout({ children }) {
             Today is the {format(new Date(), 'do MMMM Y')}
           </Typography>
           <Typography>Mario</Typography>
-          <Avatar className={classes.avatar} src="/mario-av.png" />
+          <Avatar className={classes.avatar} src="mario-av.png" />
         </Toolbar>
       </AppBar>
 
