@@ -41,7 +41,7 @@ export default function Create() {
       setDetailsError(true)
     }
     if (title && details) {
-      fetch('https://www.raininmind.com/db.json', {
+      fetch('https://localhost:8000/notes', {
         method: 'POST',
         headers: {"Content-type": "application/json"},
         body: JSON.stringify({ title, details, category })

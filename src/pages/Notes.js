@@ -7,13 +7,13 @@ export default function Notes() {
   const [notes, setNotes] = useState([]);
 
   useEffect(() => {
-    fetch('https://www.raininmind.com/db.json')
+    fetch('https://localhost:8000/notes')
       .then(res => res.json())
       .then(data => setNotes(data))
   }, [])
 
   const handleDelete = async (id) => {
-    await fetch('https://www.raininmind.com/db.json' + id, {
+    await fetch('https://localhost:8000/notes' + id, {
       method: 'DELETE'
     })
     const newNotes = notes.filter(note => note.id != id)
